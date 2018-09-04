@@ -2,7 +2,7 @@ require('./widget.scss');
 
 var feeds = [];
 
-const QUERY = 'hightech';
+const QUERY = 'bitcoin';
 const APIKEY = '04c7eabc064d41e88780607c1248f6dd';
 
 angular.module('StarterApp', ['ngResource'])
