@@ -3,7 +3,7 @@ require('./widget.scss');
 var feeds = [];
 
 const QUERY = 'hightech';
-const APIKEY = '225dd20f493f405f8017d8eae05d0f08';
+const APIKEY = '04c7eabc064d41e88780607c1248f6dd';
 
 angular.module('StarterApp', ['ngResource'])
   .controller('WidgetCtrl', function($scope, $http) {
