@@ -19,6 +19,11 @@
           color: {{style._titleColor color-5}};
       }
 
+      .sample-mainTitle {
+          {{style._mainTitleFont Heading-L}}
+          color: {{style._mainTitleColor color-5}};
+      }
+
       .sample-content {
           {{style._descFont Body-M}}
           color: {{style._descColor color-4}};
@@ -71,7 +76,7 @@
 <body>
 
     <div class="wix-style-sample" ng-controller='WidgetCtrl'>
-    <p>{{settingsUpdate}}</p>
+    <p class="sample-element sample-mainTitle">Last news from the tech world</p>
 
       <div ng-repeat="article in news | limitTo:quantity">
           <div class="sample-element sample-title">
@@ -80,8 +85,8 @@
           <div class="sample-element sample-content">
               <table>
                 <td valign="top" style="width:120px; align-content: center">
-                  <img style="height: 60px; max-width: 120px;" src="{{article.urlToImage}}"></img>
-                </td>
+                  <img style="height: 60px; max-width: 120px;" ng-src="{{article.urlToImage}}" ng-show="article.urlToImage">
+                  </td>
                 <td>
                   <div>{{article.publishedAt | date:'d-MM-yyyy HH:mm'}}</div>
                   <div>{{article.description}}</div>

@@ -21,7 +21,7 @@
             <div class="main-tab" tab="Main">
               <img class="app-logo" src="src/settings/svg/logo.svg" alt="app logo"/>
               <p>
-                news tech ticker news
+                This news ticker will give you the latest news from the the tech world
               </p>
               <wix-control name="UI.button" props="{label: 'Main CTA', className: 'btn-confirm-primary', onClick: onButtonClicked}"></wix-control>
               <div class="main-bottom">
@@ -40,7 +40,7 @@
                 <wix-control name="UI.slider" props="{
                     title: 'Number of articles',
                       min: 1,
-                      max: 3,
+                      max: 5,
                       defaultValue: 3,
                       'wix-param': '_nbArticle',
                       onChange: onUpdate('_nbArticle')
@@ -57,8 +57,29 @@
 
                 <hr class="divider-long">
 
+                <wix-control name="UI.textInput" props="{
+                      title: 'Text field',
+                      defaultText:'Title',
+                      'wix-param': '_mainTitle',
+                      onChange: onUpdate('_mainTitle')}">
+                </wix-control>
+
+                <hr class="divider-long">
+
                 <wix-control name="UI.fontAndColorPicker" props="{
                     title: 'Title font and color',
+                    startWithTheme: 'font_4',
+                    startWithColor: 'color-5',
+                    'wix-param-font': '_mainTitleFont',
+                    'wix-param-color':'_mainTitleColor',
+                    infoText: 'some information text should be here'
+                    }">
+                </wix-control>
+
+                <hr class="divider-long">
+
+                <wix-control name="UI.fontAndColorPicker" props="{
+                    title: 'Article title font and color',
                     startWithTheme: 'font_4',
                     startWithColor: 'color-5',
                     'wix-param-font': '_titleFont',
@@ -102,24 +123,16 @@
                 <hr class="divider-long">
 
                 <ul class="developer-info">
+                    <li>
+                        <wix-control name="UI.symbol"></wix-control>
+                            Jeremy Cherqui
+                    </li>
                   <li>
                     <wix-control name="UI.symbol" props="{name: 'email'}"></wix-control>
-                    <a href="mailto:support@wix.com">
-                      support@wix.com
+                    <a href="mailto:jeremy.cherqui@gmail.com">
+                      jeremy.cherqui@gmail.com
                     </a>
                   </li>
-                  <li>
-                    <wix-control name="UI.symbol" props="{name: 'globe'}"></wix-control>
-                     <a href="https://dev.wix.com/" target="_blank">
-                       Developer Website
-                     </a>
-                   </li>
-                  <li>
-                    <wix-control name="UI.symbol" props="{name: 'phone'}"></wix-control>
-                     <a href="tel:1-408-974-4897">
-                       1-408-974-4897
-                     </a>
-                    </li>
                 </ul>
 
                 <hr class="divider-long">
@@ -128,7 +141,7 @@
 
                 <hr class="divider-long">
 
-                <p class="review-paragraph">Enjoying &lt;app name\>? Leave us a review in the App Market.</p>
+                <p class="review-paragraph">Enjoying this app ? Leave us a review in the App Market.</p>
 
                 <div class="button-wrapper-center">
                     <wix-control name="UI.button" class="support_rateUs" props="{label: 'Rate Us', className: 'btn-confirm-primary', onClick: onRateUs}"></wix-control>
